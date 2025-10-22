@@ -1,8 +1,11 @@
 
+docker system prune -a
+docker image prune
+
 docker stop $(docker ps -a -q)
-
 docker rm $(docker ps -a -q)
+docker rmi $(docker images -a -q)
+docker volume prune
 
-docker rm -vf $(docker ps -aq)
 
-docker rmi -f $(docker images -aq)
+docker system prune -a
