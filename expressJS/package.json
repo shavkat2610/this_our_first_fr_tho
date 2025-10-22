@@ -1,0 +1,27 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js",
+    "docker-build:dev": "docker build -t expressjs-dev:0.0.1 -f Dockerfile.dev .",
+    "docker-run:dev": "docker run -it -p 80:80 --name node-c-dev -v ./:/app -v my-node-modules:/app/node_modules expressjs-dev:0.0.1",
+    "docker-build": "docker build -t expressjs:0.0.1 -f Dockerfile .",
+    "docker-run": "docker run -it -p 80:80 --name node-c expressjs:0.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

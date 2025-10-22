@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    padding-inline: 16px;
+    padding-block: 2px;
+    background-color: #333;
+}
+
+.logo {
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3px 2px 10px #fff, 0 0 30px #4690ff, 0 0 40px #4690ff, 0 0 50px #4690ff, 0 0 60px #4690ff, 0 0 70px #4690ff, 0 0 80px #4690ff;
+//   animation: glow 1s ease-in-out infinite alternate;
+
+}
+
+// @-webkit-keyframes glow {
+//   from {
+//     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+//   }
+  
+//   to {
+//     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+//   }
+// }
