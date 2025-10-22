@@ -25,7 +25,7 @@ services:
       - MYSQL_DATABASE=example
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
     ports:
-      - "3306:3306"
+      - "3309:3309"
 
   backend:
     build:
@@ -39,7 +39,7 @@ services:
       - DATABASE_USER=root
       - DATABASE_PASSWORD=/run/secrets/db-password
       - DATABASE_HOST=db
-      - DATABASE_PORT=3306
+      - DATABASE_PORT=3309
       - NODE_ENV=production
     ports:
       - 80:80
@@ -48,9 +48,9 @@ services:
     secrets:
       - db-password
     volumes:
-      - ./backend/src:/code/src:ro
-      - ./backend/package.json:/code/package.json
-      - ./backend/package-lock.json:/code/package-lock.json
+      - ./expressJS/src:/code/src:ro
+      - ./expressJS/package.json:/code/package.json
+      - ./expressJS/package-lock.json:/code/package-lock.json
       - back-notused:/opt/app/node_modules
     depends_on:
       - db
