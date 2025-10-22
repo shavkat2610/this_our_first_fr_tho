@@ -25,7 +25,7 @@ services:
       - MYSQL_DATABASE=example
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
     ports:
-      - "3309:3309"
+      - "3309:3306"
 
   backend:
     build:
