@@ -5,8 +5,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    networks:
-      - public
     depends_on:
       - backend
 
@@ -23,8 +21,6 @@ services:
       - type: bind
         source: /mnt/this_our_first_fr_tho/db/data
         target: /var/lib/mysql
-    networks:
-      - private
     environment:
       - MYSQL_DATABASE=example
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
@@ -56,15 +52,8 @@ services:
       - ./backend/package.json:/code/package.json
       - ./backend/package-lock.json:/code/package-lock.json
       - back-notused:/opt/app/node_modules
-    networks:
-      - public
-      - private
     depends_on:
       - db
-
-networks:
-  public:
-  private:
 
 volumes:
   back-notused:
