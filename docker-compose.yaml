@@ -21,7 +21,7 @@ services:
       - db-password
     volumes:
       - type: bind
-        source: db/data
+        source: /mnt/this_our_first_fr_tho/db/data
         target: /var/lib/mysql
     networks:
       - private
