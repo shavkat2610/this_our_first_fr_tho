@@ -19,7 +19,7 @@ services:
       - db-password
     volumes:
       - type: bind
-        source: /mnt/shavkat_web_app/this_our_first_fr_tho/db/data
+        source: /mnt/this_our_first_fr_tho/db/data
         target: /var/lib/mysql
     environment:
       - MYSQL_DATABASE=example
