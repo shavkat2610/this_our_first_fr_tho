@@ -1,8 +1,8 @@
 
-docker system prune -a
-docker image prune
+sudo docker system prune -a
+sudo docker image prune
 
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -a -q)
-docker volume prune
+sudo docker stop $(docker ps -a -q)
+sudo docker rm $(docker ps -a -q)
+sudo docker rmi $(docker images -a -q)
+sudo docker volume prune
