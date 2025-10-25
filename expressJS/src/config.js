@@ -14,7 +14,7 @@ module.exports = {
       : "db-btf5q"
   },
   port: process.env.PORT || 80
-  // if you're not using docker compose for local development, this will default to 8080
+  // if you're not using docker compose for local development, this will default to 443
   // to prevent non-root permission problems with 80. Dockerfile is set to make this 80
   // because containers don't have that issue :)
 };

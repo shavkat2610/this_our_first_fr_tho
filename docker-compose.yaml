@@ -64,9 +64,7 @@ services:
 
 networks:
   public:
-    driver: bridge
   private:
-    driver: bridge
 
 volumes:
   back-notused:
