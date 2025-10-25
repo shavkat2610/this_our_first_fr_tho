@@ -1,6 +1,6 @@
 FROM node:24-alpine
 ENV NODE_ENV=development
-ENV PORT=3000
+ENV PORT=80
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
