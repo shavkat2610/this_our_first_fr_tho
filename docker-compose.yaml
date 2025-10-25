@@ -25,7 +25,7 @@ services:
       - MYSQL_DATABASE=example
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
     ports:
-      - "3309:3306"
+      - "3306:3306"
 
   backend:
     build:
@@ -39,7 +39,7 @@ services:
       - DATABASE_USER=root
       - DATABASE_PASSWORD=/run/secrets/db-password
       - DATABASE_HOST=db
-      - DATABASE_PORT=3309
+      - DATABASE_PORT=3306
       - NODE_ENV=production
     ports:
       - 3000:3000
