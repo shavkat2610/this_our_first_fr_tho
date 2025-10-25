@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "443:443"
+    networks:
+      - public
     depends_on:
       - backend
 
@@ -21,6 +23,8 @@ services:
       - type: bind
         source: /mnt/this_our_first_fr_tho/db/data
         target: /var/lib/mysql
+    networks:
+      - private
     environment:
       - MYSQL_DATABASE=example
       - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db-password
@@ -52,8 +56,17 @@ services:
       - ./expressJS/package.json:/code/package.json
       - ./expressJS/package-lock.json:/code/package-lock.json
       - back-notused:/opt/app/node_modules
+    networks:
+      - public
+      - private
     depends_on:
       - db
+
+networks:
+  public:
+    driver: bridge
+  private:
+    driver: bridge
 
 volumes:
   back-notused:
